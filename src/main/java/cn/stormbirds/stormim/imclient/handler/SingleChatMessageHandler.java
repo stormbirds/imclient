@@ -1,5 +1,6 @@
-package cn.stormbirds.stormim.imclient;
+package cn.stormbirds.stormim.imclient.handler;
 
+import cn.stormbirds.stormim.imclient.bean.SingleMessage;
 import cn.stormbirds.stormim.imclient.bean.AppMessage;
 import cn.stormbirds.stormim.imclient.event.Events;
 import cn.stormbirds.stormim.imclient.event.IMEventCenter;

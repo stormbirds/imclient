@@ -13,15 +13,13 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.internal.StringUtil;
 
 /**
- * <p>@ProjectName:     NettyChat</p>
- * <p>@ClassName:       TCPReadHandler.java</p>
- * <p>@PackageName:     com.freddy.im.netty</p>
- * <b>
- * <p>@Description:     消息接收处理handler</p>
- * </b>
- * <p>@author:          FreddyChen</p>
- * <p>@date:            2019/04/07 21:40</p>
- * <p>@email:           chenshichao@outlook.com</p>
+ * <p>
+ * cn.stormbirds.stormim.imclient.netty.TCPReadHandler
+ * 接受报文处理器
+ * </p>
+ *
+ * @author StormBirds Email：xbaojun@gmail.com
+ * @since 2020/1/16 9:34
  */
 public class TCPReadHandler extends ChannelInboundHandlerAdapter {
 

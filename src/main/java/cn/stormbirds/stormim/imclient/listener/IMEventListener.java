@@ -1,6 +1,7 @@
 package cn.stormbirds.stormim.imclient.listener;
 
-import cn.stormbirds.stormim.imclient.MessageBuilder;
+import cn.stormbirds.stormim.imclient.bean.MessageType;
+import cn.stormbirds.stormim.imclient.factory.MessageBuilder;
 import cn.stormbirds.stormim.imclient.MessageProcessor;
 import cn.stormbirds.stormim.imclient.protobuf.MessageProtobuf;
 import com.alibaba.fastjson.JSONObject;

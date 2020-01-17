@@ -1,9 +1,7 @@
-package cn.stormbirds.stormim.imclient.interf;
+package cn.stormbirds.stormim.imclient.listener;
 
 import cn.stormbirds.stormim.imclient.MsgDispatcher;
 import cn.stormbirds.stormim.imclient.MsgTimeoutTimerManager;
-import cn.stormbirds.stormim.imclient.listener.IMSConnectStatusCallback;
-import cn.stormbirds.stormim.imclient.listener.OnEventListener;
 import cn.stormbirds.stormim.imclient.protobuf.MessageProtobuf;
 
 /**

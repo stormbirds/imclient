@@ -3,7 +3,9 @@ package cn.stormbirds.stormim.imclient.netty;
 
 
 import cn.stormbirds.stormim.imclient.*;
-import cn.stormbirds.stormim.imclient.interf.IMClientInterface;
+import cn.stormbirds.stormim.imclient.factory.ExecutorServiceFactory;
+import cn.stormbirds.stormim.imclient.handler.HeartbeatHandler;
+import cn.stormbirds.stormim.imclient.listener.IMClientInterface;
 
 
 import java.util.concurrent.TimeUnit;
@@ -21,15 +23,13 @@ import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.internal.StringUtil;
 
 /**
- * <p>@ProjectName:     NettyChat</p>
- * <p>@ClassName:       NettyTcpClient.java</p>
- * <p>@PackageName:     com.freddy.im.netty</p>
- * <b>
- * <p>@Description:     基于netty实现的tcp ims</p>
- * </b>
- * <p>@author:          FreddyChen</p>
- * <p>@date:            2019/03/31 20:41</p>
- * <p>@email:           chenshichao@outlook.com</p>
+ * <p>
+ * {@link NettyTcpClient}
+ * Netty 客户端主启动类
+ * </p>
+ *
+ * @author StormBirds Email：xbaojun@gmail.com
+ * @since 2020/1/16 9:38
  */
 public class NettyTcpClient implements IMClientInterface {
 
@@ -171,7 +171,7 @@ public class NettyTcpClient implements IMClientInterface {
         // 关闭bootstrap
         try {
             if (bootstrap != null) {
-                bootstrap.group().shutdownGracefully();
+                bootstrap.config().group().shutdownGracefully();
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -588,10 +588,10 @@ public class NettyTcpClient implements IMClientInterface {
      */
     private boolean isNetworkAvailable() {
         if (mOnEventListener != null) {
-            return mOnEventListener.isNetworkAvailable();
+            return !mOnEventListener.isNetworkAvailable();
         }
 
-        return false;
+        return true;
     }
 
     /**
@@ -634,7 +634,7 @@ public class NettyTcpClient implements IMClientInterface {
                 loopGroup.destroyWorkLoopGroup();
 
                 while (!isClosed) {
-                    if(!isNetworkAvailable()) {
+                    if(isNetworkAvailable()) {
                         try {
                             Thread.sleep(2000);
                         } catch (InterruptedException e) {
@@ -677,7 +677,7 @@ public class NettyTcpClient implements IMClientInterface {
                 try {
                     // 先释放EventLoop线程组
                     if (bootstrap != null) {
-                        bootstrap.group().shutdownGracefully();
+                        bootstrap.config().group().shutdownGracefully();
                     }
                 } finally {
                     bootstrap = null;
@@ -712,7 +712,7 @@ public class NettyTcpClient implements IMClientInterface {
                 String[] address = serverUrl.split(":");
                 for (int j = 1; j <= IMSConfig.DEFAULT_RECONNECT_COUNT; j++) {
                     // 如果ims已关闭，或网络不可用，直接回调连接状态，不再进行连接
-                    if (isClosed || !isNetworkAvailable()) {
+                    if (isClosed || isNetworkAvailable()) {
                         return IMSConfig.CONNECT_STATE_FAILURE;
                     }
 

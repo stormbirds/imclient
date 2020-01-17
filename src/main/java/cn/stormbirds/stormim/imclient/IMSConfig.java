@@ -1,15 +1,12 @@
 package cn.stormbirds.stormim.imclient;
 
 /**
- * <p>@ProjectName:     NettyChat</p>
- * <p>@ClassName:       IMSConfig.java</p>
- * <p>@PackageName:     com.freddy.im</p>
- * <b>
- * <p>@Description:     IMS默认配置，若不使用默认配置，应提供set方法给应用层设置</p>
- * </b>
- * <p>@author:          FreddyChen</p>
- * <p>@date:            2019/04/05 05:38</p>
- * <p>@email:           chenshichao@outlook.com</p>
+ * <p>
+ * {@link IMSConfig}
+ * </p>
+ *
+ * @author StormBirds Email：xbaojun@gmail.com
+ * @since 2020/1/16 9:32
  */
 public class IMSConfig {
 
@@ -26,9 +23,9 @@ public class IMSConfig {
     // 默认消息重发间隔时长
     public static final int DEFAULT_RESEND_INTERVAL = 8 * 1000;
     // 默认应用在前台时心跳消息间隔时长
-    public static final int DEFAULT_HEARTBEAT_INTERVAL_FOREGROUND = 3 * 1000;
+    public static final int DEFAULT_HEARTBEAT_INTERVAL_FOREGROUND = 30 * 1000;
     // 默认应用在后台时心跳消息间隔时长
-    public static final int DEFAULT_HEARTBEAT_INTERVAL_BACKGROUND = 30 * 1000;
+    public static final int DEFAULT_HEARTBEAT_INTERVAL_BACKGROUND = 300 * 1000;
     // 应用在前台标识
     public static final int APP_STATUS_FOREGROUND = 0;
     // 应用在后台标识

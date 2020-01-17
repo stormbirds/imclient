@@ -3,6 +3,10 @@ package cn.stormbirds.stormim.imclient;
 import cn.stormbirds.stormim.imclient.bean.AppMessage;
 import cn.stormbirds.stormim.imclient.bean.BaseMessage;
 import cn.stormbirds.stormim.imclient.bean.ContentMessage;
+import cn.stormbirds.stormim.imclient.factory.MessageBuilder;
+import cn.stormbirds.stormim.imclient.factory.MessageHandlerFactory;
+import cn.stormbirds.stormim.imclient.handler.IMessageHandler;
+import cn.stormbirds.stormim.imclient.handler.IMessageProcessor;
 import cn.stormbirds.stormim.imclient.netty.NettyTcpClient;
 import lombok.extern.slf4j.Slf4j;
 

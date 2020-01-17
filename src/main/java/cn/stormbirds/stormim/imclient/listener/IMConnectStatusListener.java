@@ -1,4 +1,4 @@
-package cn.stormbirds.stormim.imclient;
+package cn.stormbirds.stormim.imclient.listener;
 
 import cn.stormbirds.stormim.imclient.listener.IMSConnectStatusCallback;
 

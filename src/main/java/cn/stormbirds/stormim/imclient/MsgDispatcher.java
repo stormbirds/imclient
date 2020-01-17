@@ -4,16 +4,14 @@ import cn.stormbirds.stormim.imclient.listener.OnEventListener;
 import cn.stormbirds.stormim.imclient.protobuf.MessageProtobuf;
 
 /**
- * <p>@ProjectName:     NettyChat</p>
- * <p>@ClassName:       MsgDispatcher.java</p>
- * <p>@PackageName:     com.freddy.im</p>
- * <b>
- * <p>@Description:     消息转发器，负责将接收到的消息转发到应用层</p>
- * </b>
- * <p>@author:          FreddyChen</p>
- * <p>@date:            2019/04/05 05:05</p>
- * <p>@email:           chenshichao@outlook.com</p>
+ * <p>
+ * {@link MsgDispatcher}
+ * </p>
+ *
+ * @author StormBirds Email：xbaojun@gmail.com
+ * @since 2020/1/16 9:31
  */
+
 public class MsgDispatcher {
 
     private OnEventListener mOnEventListener;

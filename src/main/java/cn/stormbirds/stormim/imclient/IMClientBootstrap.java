@@ -1,6 +1,7 @@
 package cn.stormbirds.stormim.imclient;
 
-import cn.stormbirds.stormim.imclient.interf.IMClientInterface;
+import cn.stormbirds.stormim.imclient.listener.IMClientInterface;
+import cn.stormbirds.stormim.imclient.listener.IMConnectStatusListener;
 import cn.stormbirds.stormim.imclient.listener.IMEventListener;
 import cn.stormbirds.stormim.imclient.netty.NettyTcpClient;
 import cn.stormbirds.stormim.imclient.protobuf.MessageProtobuf;
@@ -9,6 +10,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import io.netty.util.internal.StringUtil;
 
+import java.util.UUID;
 import java.util.Vector;
 
 /**
@@ -20,10 +22,10 @@ import java.util.Vector;
  * @since 2020/1/15 11:53
  */
 public class IMClientBootstrap {
-    private static final String SERVER_HOST = "127.0.0.1";
+    private static final String SERVER_HOST = "wifi.stormbirds.cn";
 
     public static void main(String[] args) {
-        IMClientBootstrap.getInstance().init("","","127.0.0.1:8855",0);
+        IMClientBootstrap.getInstance().init(UUID.randomUUID().toString().replace("-",""),"","wifi.stormbirds.cn:8855",0);
     }
     private static final String TAG = IMClientBootstrap.class.getSimpleName();
 

@@ -1,6 +1,6 @@
 package cn.stormbirds.stormim.imclient;
 
-import cn.stormbirds.stormim.imclient.interf.IMClientInterface;
+import cn.stormbirds.stormim.imclient.listener.IMClientInterface;
 import cn.stormbirds.stormim.imclient.protobuf.MessageProtobuf;
 
 
@@ -11,16 +11,15 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import io.netty.util.internal.StringUtil;
 
+
 /**
- * <p>@ProjectName:     NettyChat</p>
- * <p>@ClassName:       MsgTimeoutTimerManager.java</p>
- * <p>@PackageName:     com.freddy.im</p>
- * <b>
- * <p>@Description:     消息发送超时管理器，用于管理消息定时器的新增、移除等</p>
- * </b>
- * <p>@author:          FreddyChen</p>
- * <p>@date:            2019/04/09 22:42</p>
- * <p>@email:           chenshichao@outlook.com</p>
+ * <p>
+ * {@link MsgTimeoutTimerManager}
+ * 消息发送超时管理器，用于管理消息定时器的新增、移除等
+ * </p>
+ *
+ * @author StormBirds Email：xbaojun@gmail.com
+ * @since 2020/1/16 9:33
  */
 public class MsgTimeoutTimerManager {
 

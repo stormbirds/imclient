@@ -1,7 +1,7 @@
-package cn.stormbirds.stormim.imclient;
+package cn.stormbirds.stormim.imclient.factory;
 
 
-import cn.stormbirds.stormim.imclient.interf.IMClientInterface;
+import cn.stormbirds.stormim.imclient.listener.IMClientInterface;
 import cn.stormbirds.stormim.imclient.netty.NettyTcpClient;
 
 /**

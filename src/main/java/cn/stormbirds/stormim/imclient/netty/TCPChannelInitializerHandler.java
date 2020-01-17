@@ -2,8 +2,8 @@ package cn.stormbirds.stormim.imclient.netty;
 
 
 
-import cn.stormbirds.stormim.imclient.HeartbeatRespHandler;
-import cn.stormbirds.stormim.imclient.LoginAuthRespHandler;
+import cn.stormbirds.stormim.imclient.handler.HeartbeatRespHandler;
+import cn.stormbirds.stormim.imclient.handler.LoginAuthRespHandler;
 import cn.stormbirds.stormim.imclient.protobuf.MessageProtobuf;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
@@ -14,15 +14,13 @@ import io.netty.handler.codec.protobuf.ProtobufDecoder;
 import io.netty.handler.codec.protobuf.ProtobufEncoder;
 
 /**
- * <p>@ProjectName:     NettyChat</p>
- * <p>@ClassName:       TCPChannelInitializerHandler.java</p>
- * <p>@PackageName:     com.freddy.im.netty</p>
- * <b>
- * <p>@Description:     Channel初始化配置</p>
- * </b>
- * <p>@author:          FreddyChen</p>
- * <p>@date:            2019/04/05 07:11</p>
- * <p>@email:           chenshichao@outlook.com</p>
+ * <p>
+ * {@link TCPChannelInitializerHandler}
+ *  netty通道初始化配置
+ * </p>
+ *
+ * @author StormBirds Email：xbaojun@gmail.com
+ * @since 2020/1/16 9:37
  */
 public class TCPChannelInitializerHandler extends ChannelInitializer<Channel> {
 

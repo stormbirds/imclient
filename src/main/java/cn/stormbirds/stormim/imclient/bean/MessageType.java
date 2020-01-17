@@ -1,4 +1,4 @@
-package cn.stormbirds.stormim.imclient.listener;
+package cn.stormbirds.stormim.imclient.bean;
 
 /**
  * <p>

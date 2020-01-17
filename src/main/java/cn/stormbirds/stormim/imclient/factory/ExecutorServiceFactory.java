@@ -1,4 +1,4 @@
-package cn.stormbirds.stormim.imclient;
+package cn.stormbirds.stormim.imclient.factory;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

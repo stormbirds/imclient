@@ -1,4 +1,4 @@
-package cn.stormbirds.stormim.imclient;
+package cn.stormbirds.stormim.imclient.factory;
 
 import cn.stormbirds.stormim.imclient.bean.AppMessage;
 import cn.stormbirds.stormim.imclient.bean.BaseMessage;

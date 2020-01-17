@@ -1,6 +1,10 @@
-package cn.stormbirds.stormim.imclient;
+package cn.stormbirds.stormim.imclient.factory;
 
-import cn.stormbirds.stormim.imclient.listener.MessageType;
+import cn.stormbirds.stormim.imclient.handler.GroupChatMessageHandler;
+import cn.stormbirds.stormim.imclient.handler.IMessageHandler;
+import cn.stormbirds.stormim.imclient.handler.ServerReportMessageHandler;
+import cn.stormbirds.stormim.imclient.handler.SingleChatMessageHandler;
+import cn.stormbirds.stormim.imclient.bean.MessageType;
 
 import java.util.ArrayList;
 import java.util.List;
